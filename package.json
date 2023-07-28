@@ -1,0 +1,27 @@
+{
+  "name": "api-office",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "keywords": [],
+  "author": "Brandon Castillo",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "2.8.5",
+    "dotenv": "16.3.1",
+    "express": "4.18.2",
+    "ts-node": "10.9.1",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@types/cors": "2.8.13",
+    "@types/express": "4.17.17",
+    "@types/node": "20.4.5",
+    "ts-node-dev": "2.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+  }
+}
