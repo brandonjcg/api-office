@@ -1,5 +1,7 @@
 import bodyParser from 'body-parser';
 import express, { Application, Request, Response } from 'express';
+import routes from './api/routes';
+import dbInit from './database/init';
 
 const app: Application = express();
 
@@ -16,6 +18,10 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 const PORT = process.env.PORT ?? 8000;
+
+app.use('/api/v1', routes);
+
+dbInit();
 
 app.listen(PORT, () => {
   console.log(`Server is running on PORT ${PORT}`);
